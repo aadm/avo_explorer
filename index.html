@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>AVO Explorer</title>
+<link href="https://aadm.github.io/avo_explorer/assets/css/style.css?v=125c6fcf3399632f2bc569ed5931ebbce3b990a4" rel="stylesheet">
+</head>
+<body>
+<div class="container">
+<h1 id="avo-explorer">AVO Explorer</h1>
+
+
+Interactive tool to explore AVO classes.
+
+Written in Python, delivered via Jupyter. Uses the standard scientific Python libraries plus Agilegeo’s <a href="https://www.agilegeoscience.com/bruges/">bruges</a> geophysical library.</p>
+
+To launch the interactive notebook click this button:
+<p>    
+    
+<a href="http://mybinder.org:/repo/aadm/avo_explorer"><img src="http://mybinder.org/badge.svg" alt="Binder" /></a>
+    
+    
+<h3 id="how-to-use-it">How to use it</h3>
+    
+If you need a more complete introduction to Jupyter notebooks, see <a href="http://nbviewer.jupyter.org/github/jupyter/notebook/blob/master/docs/source/examples/Notebook/Notebook%20Basics.ipynb">here</a>.
+<p>
+Otherwise, read on.
+<p>
+The first thing you’ll see after you click on the <em>Launch Binder</em> button is this window, a sort of file manager to open notebook documents, text file etc (it’s called the <em>Notebook Dashboard</em>):
+<p>
+
+<img src="avo_explorer_fig0.png" width=300>
+<p>
+    
+Click on the <code class="highlighter-rouge">avo_explorer_v2.ipynb</code> to start the notebook.
+<p>
+Now From the menubar select <em>Cell/Run All</em> to have everything ready to run; to clean up the window and make more space, select <em>View/Toggle Header</em> and <em>View/Toggle Toolbar</em>.
+<p>
+The first interesting cell you will see is this one:
+<p>
+ 
+<img src="avo_explorer_fig1.png" width=600>
+<p>
+    
+The plot with the AVO classes is the output of the function <code class="highlighter-rouge">make_avoclasses()</code>. There’s not much to it really, just a reminder what AVO is all about.
+<p>
+Let’s scroll down until you get to to the <strong>Interactive AVO explorer</strong>:
+<p>
+     
+<img src="avo_explorer_fig2.png" width=600>
+<p>
+     
+This is the output of the function <code class="highlighter-rouge">avomod1</code> made interactive through <a href="http://ipywidgets.readthedocs.io/en/latest/examples/Using%20Interact.html">Jupyter’s magic</a>. It computes the AVO response along an interface between two layers. Each media is characterised by its elastic properties (P-wave, S-wave and density); the upper layer is specified by <code class="highlighter-rouge">vp1</code>, <code class="highlighter-rouge">vs1</code>, <code class="highlighter-rouge">rho1</code>, the lower by <code class="highlighter-rouge">vp2</code>, <code class="highlighter-rouge">vs2</code>, <code class="highlighter-rouge">rho2</code>.
+<p>
+    
+Play with the sliders to change the elastic properties of the two layers and see the resulting <code class="highlighter-rouge">AI</code> (acoustic impedance, <code class="highlighter-rouge">vp*rho</code>) and <code class="highlighter-rouge">Vp/Vs</code> curves, the AVO curve, a synthetic seismic gather and the AVO response on the Intercept/Gradient crossplot. You can also change the equation to be used (Zoeppritz or Shuey 2-term), the maximum angle of incidence, polarity of the data and finally to have the gather displayed in black (activating the checkbox) or in red/blue colors.
+<p>
+    
+Scroll further down to play with the <strong>Interactive AVO classes explorer</strong>:
+<p>
+    
+    
+<img src="avo_explorer_fig3.png" width=600>
+<p>
+    
+    
+This is generated with the function <code class="highlighter-rouge">avomod2</code> and can be used to inspect predefined configurations of shale/sand scenarios that represent the classic four AVO classes; what you can also do is choose the fluid content of the lower (sandy) layer and also modify its porosity with the slider <code class="highlighter-rouge">phimod</code> which allows to add or subtract up to 0.1 p.u. from the starting point (indicated in the text between the sliders and the plots).
+<p>
+    
+If it doesn’t work for you, too bad! I’ve created this only as a demo for some of my colleagues and release it for the rest of the world with no promises that it will work for you too. If you think there’s something to be fixed or missing go to the <a href="https://github.com/aadm/avo_explorer">original github repo</a>, make your changes and then share it back.
+<p>
+    
+</div>
+</body>
+</html>
