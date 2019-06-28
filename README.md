@@ -8,6 +8,10 @@ To launch the interactive notebook click this button:
 
 [![Binder](http://mybinder.org/badge.svg)](http://mybinder.org:/repo/aadm/avo_explorer)
 
+
+<a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc/4.0/88x31.png" /></a><br />This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/">Creative Commons Attribution-NonCommercial 4.0 International License</a>.
+
+
 ### How to use it
 
 If you need a more complete introduction to Jupyter notebooks, see [here](http://nbviewer.jupyter.org/github/jupyter/notebook/blob/master/docs/source/examples/Notebook/Notebook%20Basics.ipynb).
